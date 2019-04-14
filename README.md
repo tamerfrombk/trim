@@ -9,7 +9,7 @@ A simple command line utility that trims each line of `stdin` and echoes the tri
 Navigate to the directory where you downloaded the sources and run `make`. This will build the executable named `trim` into that directory.
 
 To install the executable on your system, type `sudo make install`. This will place the `trim` executable in your
-`/opt/bin` directory. Note that you'll need administrator privilages to run the installation.
+`/opt/bin` directory and install the man page. Note that you'll need administrator privilages to run the installation.
 
 **NOTE**: In order to access `trim` without using the full path `/opt/bin/trim`, you may need to add `/opt/bin` to your `PATH`.
 

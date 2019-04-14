@@ -10,6 +10,10 @@ SOURCES = trim.cpp
 OUTPUT = trim
 INSTALL_DIR = /opt/bin
 
+MAN_PAGE = trim.1.gz
+MAN_PAGE_DIR = /opt/man
+MAN_PAGE_LINK = /usr/share/man/man1
+
 all: build
 
 build:
@@ -17,7 +21,10 @@ build:
 
 install: build
 	mkdir -p $(INSTALL_DIR)
-	mv -f $(OUTPUT) $(INSTALL_DIR)
+	cp -f $(OUTPUT) $(INSTALL_DIR)
+	mkdir -p $(MAN_PAGE_DIR) 
+	cp -f $(MAN_PAGE) $(MAN_PAGE_DIR)
+	ln -sf $(MAN_PAGE_DIR)/$(MAN_PAGE) $(MAN_PAGE_LINK)/$(MAN_PAGE)
 
 clean:
 	rm -f $(OUTPUT)
