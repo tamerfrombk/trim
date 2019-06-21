@@ -8,6 +8,8 @@ A simple command line utility that trims each line of `stdin` and echoes the tri
 
 Navigate to the directory where you downloaded the sources and run `make`. This will build the executable named `trim` into that directory.
 
+## Installing
+
 To install the executable on your system, type `sudo make install`. This will place the `trim` executable in your
 `/opt/bin` directory and install the man page. Note that you'll need administrator privilages to run the installation.
 
@@ -15,6 +17,7 @@ To install the executable on your system, type `sudo make install`. This will pl
 
 ## Features
 * Small executable: < 20 lines of source code and 14K executable
+* Only depends on `libstdc++`
 * Supports unicode and multi-line sources
 
 ## Examples

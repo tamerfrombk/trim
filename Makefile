@@ -14,12 +14,14 @@ MAN_PAGE = trim.1.gz
 MAN_PAGE_DIR = /opt/man
 MAN_PAGE_LINK = /usr/share/man/man1
 
-all: build
+.PHONY: all clean install _build
 
-build:
+all: _build
+
+_build:
 	$(CXX) $(CXXFLAGS) $(SOURCES) -o $(OUTPUT)
 
-install: build
+install: _build
 	mkdir -p $(INSTALL_DIR)
 	cp -f $(OUTPUT) $(INSTALL_DIR)
 	mkdir -p $(MAN_PAGE_DIR) 
